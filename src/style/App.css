@@ -1,0 +1,72 @@
+#root {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+  /* padding: 2rem;
+  text-align: center; */
+} 
+
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  column-gap: 40px;               /* Space between the two columns */
+  row-gap: 10px;                  /* Space between vertical rows */
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(0,0,0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Each individual stat box */
+.stat-row {
+  display: flex;
+  justify-content: space-between; /* Pushes label left, value right */
+  align-items: center;
+}
+
+.stat-value {
+  text-align: right;
+}
+
+.character-portrait {
+  background-color: rgba(0,0,0, 0.2);
+  margin-right: 20px;
+}
+
+.character-portrait img {
+  width: 200px; /* Adjust this value as needed */
+  height: auto;  /* Maintains original aspect ratio */
+}
+
+.weapon-container {
+  background-color: rgba(0,0,0, 0.2);
+  margin-right: 20px;
+}
+
+.dashboard-container {
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 25px;
+  margin: 15px;
+  display: flex;
+}
+
+.nav-container {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  background-color: white;
+  padding: 20px 20px;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.nav-container > img {
+  padding-right: 20px;
+}
+
+.nav-container > div > button {
+  margin-right: 10px;
+}
