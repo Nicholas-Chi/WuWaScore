@@ -1,0 +1,84 @@
+{
+    "icontypes": [
+        {
+            "name": "HP",
+            "id": 1,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/hp.png"
+        },
+        {
+            "name": "ATK",
+            "id": 2,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/atk.png"
+        },
+                {
+            "name": "DEF",
+            "id": 3,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/def.png"
+        },
+        {
+            "name": "Crit. Rate",
+            "id": 4,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/critrate.png"
+        },
+        {
+            "name": "Crit DMG",
+            "id": 5,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/critdamage.png"
+        },        
+        {
+            "name": "Energy Regen",
+            "id": 6,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/energyregen.png"
+        },
+        {
+            "name": "Basic Attack DMG Bonus",
+            "id": 7,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/basicatkdmgbonus.png"
+        },
+        {
+            "name": "Heavy Attack DMG Bonus",
+            "id": 8,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/heavyatkdmgbonus.png"
+        },
+        {
+            "name": "Resonance Skill DMG Bonus",
+            "id": 9,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/skilldmgbonus.png"
+        },
+        {
+            "name": "Resonance Liberation Skill DMG Bonus",
+            "id": 10,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/liberationdmgbonus.png"
+        },
+        {
+            "name": "Aero DMG Bonus",
+            "id": 11,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/aerodmgbonus.png"
+        },
+        {
+            "name": "Electro DMG Bonus",
+            "id": 12,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/electrodmgbonus.png"
+        },
+        {
+            "name": "Fusion DMG Bonus",
+            "id": 13,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/fusiondmgbonus.png"
+        },
+        {
+            "name": "Glacio DMG Bonus",
+            "id": 14,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/glaciodmgbonus.png"
+        },
+        {
+            "name": "Havoc DMG Bonus",
+            "id": 15,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/havocdmgbonus.png"
+        },
+        {
+            "name": "Spectro DMG Bonus",
+            "id": 16,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/spectrodmgbonus.png"
+        }
+    ]
+}

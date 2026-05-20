@@ -1,0 +1,23 @@
+{
+    "echoes" : [
+        {
+            "id": 1,
+            "name": "Thundering Memphis",
+            "cost": 4,
+            "sets": ["Void Thunder"]
+        },
+        {
+            "id": 2,
+            "name": "Hoochief Cyclone",
+            "cost": 3,
+            "sets": ["Sierra Gale"]
+        },
+        {
+            "id": 3,
+            "name": "Snip Snap",
+            "cost": 1,
+            "sets": ["Molten Rift"]
+        }
+    ]
+}
+

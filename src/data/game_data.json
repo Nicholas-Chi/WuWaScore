@@ -1,0 +1,17 @@
+{
+    "characters": {
+       "1001": {
+            "id": 1001,
+            "name": "Baizhi",
+            "weapon": "Rectifier",
+            "attribute": "Glacio"
+        },
+
+        "1002": {
+            "id": 1002,
+            "name": "Builing",
+            "weapon": "Rectifier",
+            "attribute": "Electro"
+        }
+    }
+}

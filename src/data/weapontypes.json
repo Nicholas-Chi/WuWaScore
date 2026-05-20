@@ -1,0 +1,29 @@
+{
+    "weapontypes": [
+        {
+            "id": 1,
+            "name": "Sword",
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/sword.webp"
+        },
+        {
+            "id": 2,
+            "name": "Broadblade",
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/broadblade.webp"
+        },
+        {
+            "id": 3,
+            "name": "Pistols",
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/pistol.webp"
+        },
+        {
+            "id": 4,
+            "name": "Gauntlets",
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/gauntlet.webp"
+        },
+        {
+            "id": 5,
+            "name": "Rectifier",
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/rectifier.webp"
+        }
+    ]
+}

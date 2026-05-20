@@ -1,0 +1,34 @@
+{
+    "attributes": [
+        {
+            "id": 1,
+            "element": "Fusion",
+            "icon": "/assets/icons/attributes/fusion.webp"
+        },
+        {
+            "id": 2,
+            "element": "Aero",
+            "icon": "/assets/icons/attributes/aero.webp"
+        },
+        {
+            "id": 3,
+            "element": "Electro",
+            "icon": "/assets/icons/attributes/electro.webp"
+        },
+        {
+            "id": 4,
+            "element": "Glacio",
+            "icon": "/assets/icons/attributes/glacio.webp"
+        },
+        {
+            "id": 5,
+            "element": "Spectro",
+            "icon": "/assets/icons/attributes/spectro.webp"
+        },
+        {
+            "id": 6,
+            "element": "Havoc",
+            "icon": "/assets/icons/attributes/havoc.webp"
+         }
+    ]
+}

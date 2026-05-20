@@ -1,9 +1,11 @@
 body {
+    margin: 0 auto;
     background: radial-gradient(circle,#3c4e65,#5a6a85,#283445)
     /* background-color: #272424; */
 }
 
 #root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   /* max-width: 1280px; */
   /* margin: 0 auto; */
   /* padding: 2rem;
@@ -19,6 +21,7 @@ body {
   width: 80%;
   max-width: 600px;
   background-color: rgba(0,0,0, 0.2);
+  color: white;
   padding: 20px;
   border-radius: 8px;
 }
@@ -55,12 +58,13 @@ body {
   width: 80%;
   background: radial-gradient(circle, #272424, #3b3a3a, #1a1919);
   padding: 25px;
-  margin: 15px;
+  margin: 15px auto;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 50px;
   background: radial-gradient(circle, #272424, #3b3a3a, #1a1919);
   padding: 5px 30px;
@@ -69,10 +73,469 @@ body {
   box-sizing: border-box;
 }
 
-.nav-container > img {
+.nav-container > * {
+  margin: 5px 0px;
+}
+
+.nav-container img {
+  height: 40px;
   padding-right: 20px;
 }
 
 .nav-container > div > button {
   margin-right: 10px;
+  font-style: bold;
+  
+}
+
+.nav-container button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.echo-form-container {
+  background-color: rgba(0,0,0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.echo-form-container > button {
+  background-color: #1668dc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Echo Window */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;     /* Center vertically */
+  z-index: 1000;           /* Ensure it sits on top */
+}
+
+.echo-window {
+  position: relative;
+  background: radial-gradient(circle, #272424, #3b3a3a, #1a1919);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 80%;
+  height: 70%;
+  /* max-width: 500px; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  /* color: #333; */
+}
+
+.close-btn:hover {
+  color: white;
+}
+
+/* hold all the cost blocks */
+.echo-grid {
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* each cost section */
+.cost-section {
+  background-color: rgba(0,0,0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+/* echoes inside each column */
+.echo-list {
+  display: flex;
+  flex-direction: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.echo-list p {
+  color: white;
+}
+
+.echo-card {
+  background: transparent;
+  border: none;
+}
+
+.echo-card img {
+  width: 50%;
+  /* height: auto;
+  border-radius: 8px; */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;  
+  border-radius: 50%;
+
+}
+
+.echo-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+
+
+/* Set Filter */
+.set-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.set-button {
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 4px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.set-button img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.set-button.active {
+  border-color: #fff; /* Highlight active set */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.set-button:hover {
+  transform: scale(1.1);
+}
+
+.echo-editor-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 12px;
+  color:white;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.echo-editor-form > img {
+  width: 88px;
+  height: 80px;
+  background: #333;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.echo-editor-form select, .echo-editor-form input {
+  width: 100%;
+  padding: 10px;
+  background-color: #1a1a1a; /* Darker input background */
+  border: none;
+  border-radius: 6px;
+  color: #e0e0e0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Container for Main Stat + Value */
+.main-stat-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.main-stat-row select { flex: 2; }
+.main-stat-row input { flex: 1; text-align: center; }
+
+/* The Save Button */
+.echo-editor-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #e0e0e0; /* Light grey/off-white */
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.echo-editor-form button:hover {
+  background-color: #ffffff;
+}
+
+select option:disabled {
+  color: #888;
+}
+
+.sub-stat-row {
+  display: flex;
+  gap: 10px;
+}
+
+.echo-backpack {
+  max-width: 800px;      /* Adjust this value to your preferred width */
+  margin: 20px auto;     /* Centers the backpack and adds spacing */
+  padding: 20px;
+  background: #2c2e33;   /* Optional: give it a distinct background */
+  border-radius: 12px;
+}
+
+.echo-backpack > h2 {
+  color: white;
+}
+
+.backpack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  /* Remove background here if you added it to .echo-backpack */
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.backpack-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #3d4048; 
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #4f535c;
+  overflow: hidden;
+}
+
+.backpack-item:hover {
+  background: #4a4e58;
+  border-color: #6a6f7a;
+  transform: translateY(-2px);
+}
+
+/* .backpack-item img {
+  width: 60px;
+  height: 60px;
+} */
+
+.echo-icon-container {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.echo-cost-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #5a6b32;
+  color: white;
+  border: 1px solid white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sonata-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.echo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.delete-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 8px;
+  color: #ff5f5f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.delete-icon:hover {
+  opacity: 1;
+  color: #ff2b2b;
+}
+
+/* .sonata-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.echo-img {
+    width: 60px;
+    height: 60px;
+} */
+
+.character-window {
+  position: relative;
+  background: radial-gradient(circle, #272424, #3b3a3a, #1a1919);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 80%;
+  height: 70%;
+  /* max-width: 500px; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.character-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 250px;
+  height: 40px;
+  padding: 10px;
+  background-color: #1a1a1a; /* Darker input background */
+  border: none;
+  border-radius: 6px;
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.weapon-filter,
+.attribute-filter {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 2px;
+  margin: 10px 0px;
+  overflow: hidden;
+}
+
+.weapon-filter div,
+.attribute-filter div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.weapon-filter button,
+.attribute-filter button {
+  background: transparent;
+  border: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.weapon-filter button:last-child,
+.attribute-filter button:last-child {
+  border-right: none; /* Remove right border for the last button */
+}
+
+.weapon-filter button:hover,
+.attribute-filter button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.weapon-filter button img,
+.attribute-filter button img {
+  width: 26px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.weapon-filter div button.selected,
+.attribute-filter div button.selected {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.character-cards {
+  width: 95%;
+  height: 400px;
+  border: 1px solid white;
+  overflow: auto;
+  padding: 20px;
+}
+
+.character-cards button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  margin: 5px 5px;
+}
+
+.character-grid > div {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+}
+
+.character-grid-item > div:hover{
+  transform: scale(1.05);
+  transition: transform 0.2s;
 }
