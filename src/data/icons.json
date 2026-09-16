@@ -16,7 +16,7 @@
             "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/def.png"
         },
         {
-            "name": "Crit. Rate",
+            "name": "Crit Rate",
             "id": 4,
             "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/critrate.png"
         },
@@ -46,7 +46,7 @@
             "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/skilldmgbonus.png"
         },
         {
-            "name": "Resonance Liberation Skill DMG Bonus",
+            "name": "Resonance Liberation DMG Bonus",
             "id": 10,
             "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/liberationdmgbonus.png"
         },
@@ -79,6 +79,12 @@
             "name": "Spectro DMG Bonus",
             "id": 16,
             "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/spectrodmgbonus.png"
+        },
+
+        {
+            "name": "Healing Bonus",
+            "id": 17,
+            "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/healingbonus.png"
         }
     ]
 }

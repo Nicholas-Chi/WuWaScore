@@ -2,11 +2,13 @@
 // import sonata from "../../data/sonatas.json"
 import weapontypes from "../../data/weapontypes.json"
 import attributes from "../../data/attributes.json"
+import type { WWCharacter } from "../../data/WWCharacter";
 import { WWCharacterData } from "../../data/WWCharacter"
 import React from "react";
 
 interface CharacterFilterProps {
     onClose: () => void
+    onSelectCharacter: (character: WWCharacter) => void
 }
 
 function CharacterFilter(props: CharacterFilterProps) {
@@ -68,7 +70,7 @@ function CharacterFilter(props: CharacterFilterProps) {
                     <div className="character-grid">
                         <div className="character-grid-item">
                             {filteredCharacters.map(character => (
-                                <div key={character.charId} onClick={() => console.log(`Clicked on character: ${character.name}`)}  >
+                                <div key={character.charId} onClick={() => props.onSelectCharacter(character)}  >
                                     <img src={character.images.icon} alt={character.name} />
                                     <p>{character.name}</p>
                                     {/* <img src={character.rarity.img} alt={character.rarity.alt} /> */}

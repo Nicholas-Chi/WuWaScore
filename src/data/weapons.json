@@ -1,0 +1,24 @@
+{
+    "weapons" : [
+        {
+            "name": "Training Broadblade",
+            "type": "Sword",
+            "img": "https://whisperingsea.github.io/wuthering-waves-assets/images/weapons/TrainingBroadblade.png",
+            "rarity": 1,
+            "baseAttack": 48,
+            "subStat": "Elemental Mastery",
+            "passiveName": "Flame's Embrace",
+            "passiveDesc": "Increases Elemental Mastery by 80 for 12s after using an Elemental Burst. Can be triggered once every 30s."
+        },
+        {
+            "name": "Training Sword",
+            "type": "Sword",
+            "img": "https://whisperingsea.github.io/wuthering-waves-assets/images/weapons/TrainingSword.png",
+            "rarity": 1,
+            "baseAttack": 48,
+            "subStat": "Physical DMG Bonus",
+            "passiveName": "Falcon's Defiance",
+            "passiveDesc": "ATK is increased by 20%. Triggers on taking DMG: the soul of the Falcon of the West awakens, holding the banner of resistance aloft, regenerating HP equal to 100% of ATK and dealing DMG equal to 200% of ATK to surrounding enemies. Lasts for 15s and can only occur once every 60s."
+        }
+    ]
+}

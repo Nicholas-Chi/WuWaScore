@@ -14,5 +14,22 @@ export const Buling: WWCharacter = {
     images: {
         icon: "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/Buling.png",
         portrait: "https://static.wikia.nocookie.net/wutheringwaves/images/0/0e/Buling_Full_Sprite.png/revision/latest?cb=20240202080219",
+    },
+
+    stats: {
+        base_hp: 12812,
+        base_atk: 212,
+        base_def: 1002,
+        base_crit: 5,
+        base_crit_dmg: 150,
+        base_healing: 0,
+        max_energy: 175,
+        bonus_ele: 0,
+        bonus_hp: 1.12,
+        bonus_atk: 0,
+        bonus_def: 0,
+        bonus_heal: 12,
+        bonus_crit: 0,
+        bonus_crit_dmg: 0
     }
 }

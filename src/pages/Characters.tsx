@@ -1,11 +1,22 @@
-import SearchFilter from "../components/modals/SearchFilter"
+import CharacterFilter from "../components/modals/CharacterFilter"
 import React from "react"
-export default function Characters() {
+import type { WWCharacter } from "../data/WWCharacter"
+import ShowcaseDashboard from "../components/cards/ShowcaseDashboard"
+
+export default function Characters() {  
 
     const [showCharacterWindow, setShowCharacterWindow] = React.useState(false)
+    const [selectedCharacter, setSelectedCharacter] =  React.useState<WWCharacter | null>(null)
 
     function toggleCharacterWindow() {
         setShowCharacterWindow(prevState => !prevState)
+    }
+
+    function editSelectedCharacter(character: WWCharacter)
+    {
+        setSelectedCharacter(character)
+        // close the character window after selecting a character
+        setShowCharacterWindow(false)
     }
 
     return (
@@ -15,15 +26,20 @@ export default function Characters() {
                 <button onClick={toggleCharacterWindow}>
                     {showCharacterWindow ? "Close Window" : "Add Character"}
                 </button>
-                    {showCharacterWindow && (<SearchFilter onClose={toggleCharacterWindow}/>)}
+
+                    {showCharacterWindow && (<CharacterFilter 
+                    onClose={toggleCharacterWindow}
+                    onSelectCharacter={editSelectedCharacter}
+                    />)}
                 <div className="characterGrid">
+                    <ShowcaseDashboard character={selectedCharacter} />
                 </div>
             </div>
 
-            <div>
+            {/* <div>
                 <input type="search" name="" id="" />
             </div>
-            <p>This is where you can view and manage your characters.</p>
+            <p>This is where you can view and manage your characters.</p> */}
         </div>
     )
 }

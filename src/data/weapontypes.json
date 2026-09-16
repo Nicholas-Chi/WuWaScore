@@ -25,5 +25,32 @@
             "name": "Rectifier",
             "icon": "https://raw.githubusercontent.com/ryanbenson/wuthering-waves-assets/master/images/rectifier.webp"
         }
+    ],
+    "rarities":[
+        {
+            "id": 1,
+            "name": "1",
+            "icon": "https://raw.githubusercontent.com/WhisperingSea/wuthering-waves-assets/master/images/icon_stars/Icon_1_Star.webp"
+        },
+        {
+            "id": 2,
+            "name": "2",
+            "icon": "https://raw.githubusercontent.com/WhisperingSea/wuthering-waves-assets/master/images/icon_stars/Icon_2_Stars.webp"
+        },
+        {
+            "id": 3,
+            "name": "3",
+            "icon": "https://raw.githubusercontent.com/WhisperingSea/wuthering-waves-assets/master/images/icon_stars/Icon_3_Stars.webp"
+        },
+        {
+            "id": 4,
+            "name": "4",
+            "icon": "https://raw.githubusercontent.com/WhisperingSea/wuthering-waves-assets/master/images/icon_stars/Icon_4_Stars.webp"
+        },
+        {
+            "id": 5,
+            "name": "5",
+            "icon": "https://raw.githubusercontent.com/WhisperingSea/wuthering-waves-assets/master/images/icon_stars/Icon_5_Stars.webp"
+        }
     ]
 }

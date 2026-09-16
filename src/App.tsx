@@ -3,7 +3,7 @@
 import './style/style.css'
 // import Stats from "./components/Stats.tsx"
 // import CharacterCard from './components/CharacterCard.tsx'
-import Dashboard from './components/characters/Dashboard'
+import Dashboard from './components/cards/ShowcaseDashboard'
 import Characters from './pages/Characters'
 // import Weapon from "./components/Weapon.tsx"
 // import './style/style.css'
@@ -17,7 +17,7 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Dashboard/>} />
+        <Route path="/" />
         <Route path="characters" element={<Characters/>} />
         <Route path="echoes" element={<EchoForm/>} />
       </Routes>

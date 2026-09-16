@@ -32,23 +32,23 @@ export default function EchoWindow(props: EchoFormProps) {
     }
 
     // Map filtered echoes to JSX elements
-    const echoElements = filteredEchoes.map(echo => (
-        // <div key={echo.id} className="echo-card">
-        //     <img src={`/assets/icons/echoes/${echo.id}.webp`} alt={echo.name} />
-        //     {/* <h3>{echo.name}</h3> */}
-        //     {/* <p>Cost: {echo.cost}</p>
-        //     <p>Set: {echo.sets.join(", ")}</p> */}
-        // </div>
+    // const echoElements = filteredEchoes.map(echo => (
+    //     // <div key={echo.id} className="echo-card">
+    //     //     <img src={`/assets/icons/echoes/${echo.id}.webp`} alt={echo.name} />
+    //     //     {/* <h3>{echo.name}</h3> */}
+    //     //     {/* <p>Cost: {echo.cost}</p>
+    //     //     <p>Set: {echo.sets.join(", ")}</p> */}
+    //     // </div>
 
-        <button
-            key={echo.id}
-            className="echo-card"
-            onClick={() => handleEchoClick(echo)}
-        >
-            <img src={`/assets/icons/echoes/${echo.id}.webp`} alt={echo.name} />
-        </button>
-        )
-    )
+    //     <button
+    //         key={echo.id}
+    //         className="echo-card"
+    //         onClick={() => handleEchoClick(echo)}
+    //     >
+    //         <img src={`/assets/icons/echoes/${echo.id}.webp`} alt={echo.name} />
+    //     </button>
+    //     )
+    // )
 
     return (
         <div className="modal-overlay" onClick={props.onClose}>
