@@ -1,10 +1,15 @@
 import icons from "../../data/icons.json";
 import type { WWCharacter } from "../../data/WWCharacter";
+import CalculateStats from "../../hooks/CalculateStats.tsx";
+
 interface StatsPanelProps {
   character: WWCharacter | null;
+  weapon: any | null;
 }
 
-function StatsPanel({ character }: StatsPanelProps) {
+function StatsPanel({ character, weapon }: StatsPanelProps) {
+  const stats = CalculateStats({ character, weapon });
+
   return (
     <div className="stats-container">
       <div className="stat-item">
@@ -14,7 +19,7 @@ function StatsPanel({ character }: StatsPanelProps) {
           alt="HP"
         />
         <span className="stat-name">HP </span>
-        <span className="value">{character?.stats.base_hp}</span>
+        <span className="value">{stats.total_hp}</span>
       </div>
 
       <div className="stat-item">
@@ -23,8 +28,12 @@ function StatsPanel({ character }: StatsPanelProps) {
           src={icons.icontypes.find((i) => i.name === "ATK")?.icon}
           alt="ATK"
         />
-        <span className="stat-name">Attack </span>
-        <span className="value">{character?.stats.base_atk}</span>
+        <span className="stat-name">Attack </span> <br />
+        <span className="value">
+          Base Attack: {character?.stats.base_atk}{" "}
+        </span>{" "}
+        <br />
+        <span className="value">With Weapon: {stats.total_atk}</span>
       </div>
 
       <div className="stat-item">
@@ -64,7 +73,7 @@ function StatsPanel({ character }: StatsPanelProps) {
           alt="Energy Regen"
         />
         <span className="stat-name">Energy Regen </span>
-        <span className="value">{`100.00%`}</span>
+        <span className="value">{stats.total_energy_regen} </span>
       </div>
 
       <div className="stat-item">

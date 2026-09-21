@@ -18,6 +18,24 @@ export interface WWCharacter {
         icon: string;
         portrait: string;
     };
+
+    stats: {
+        base_hp: number;
+        base_atk: number;
+        base_def: number;
+        base_crit: number;
+        base_crit_dmg: number;
+        base_healing: number;
+        base_energy_regen: number;
+        bonus_ele: number;
+        bonus_hp: number;
+        bonus_atk: number;
+        bonus_def: number;
+        bonus_heal: number;
+        bonus_crit: number;
+        bonus_crit_dmg: number;
+        bonus_energy_regen: number;
+    }
 }
 
 export const WWCharacterData: WWCharacter[] = [
