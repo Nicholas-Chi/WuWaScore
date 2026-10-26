@@ -7,6 +7,7 @@ export default function Characters() {
   const [showCharacterWindow, setShowCharacterWindow] = React.useState(false);
   const [selectedCharacter, setSelectedCharacter] =
     React.useState<WWCharacter | null>(null);
+
   const [selectedWeapon, setSelectedWeapon] = React.useState<any | null>(null);
 
   function toggleCharacterWindow() {

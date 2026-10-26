@@ -53,7 +53,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           alt="Crit Rate"
         />
         <span className="stat-name">Crit Rate </span>
-        <span className="value">{character?.stats.base_crit}</span>
+        <span className="value">{character?.stats.base_crit}%</span>
       </div>
 
       <div className="stat-item">
@@ -63,7 +63,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           alt="Crit DMG"
         />
         <span className="stat-name">Crit DMG </span>
-        <span className="value">{character?.stats.base_crit_dmg}</span>
+        <span className="value">{character?.stats.base_crit_dmg}%</span>
       </div>
 
       <div className="stat-item">
@@ -73,7 +73,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           alt="Energy Regen"
         />
         <span className="stat-name">Energy Regen </span>
-        <span className="value">{stats.total_energy_regen} </span>
+        <span className="value">{stats.total_energy_regen}%</span>
       </div>
 
       <div className="stat-item">
@@ -96,7 +96,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           }
           alt="Basic Attack DMG Bonus"
         />
-        <span className="stat-name">Basic Attack DMG Bonus </span>
+        <span className="stat-name">Basic Attack</span>
         <span className="value">{`0.00%`}</span>
       </div>
 
@@ -109,7 +109,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           }
           alt="Heavy Attack DMG Bonus"
         />
-        <span className="stat-name">Heavy Attack DMG Bonus </span>
+        <span className="stat-name">Heavy Attack</span>
         <span className="value">{`0.00%`}</span>
       </div>
 
@@ -122,7 +122,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           }
           alt="Resonance Skill DMG Bonus"
         />
-        <span className="stat-name">Resonance Skill DMG Bonus </span>
+        <span className="stat-name">Resonance Skill</span>
         <span className="value">{`0.00%`}</span>
       </div>
 
@@ -136,93 +136,26 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           }
           alt="Resonance Liberation DMG Bonus"
         />
-        <span className="stat-name">Resonance Liberation DMG Bonus </span>
+        <span className="stat-name">Resonance Liberation</span>
         <span className="value">{`0.00%`}</span>
       </div>
 
       <div className="stat-item">
-        {character?.element === "Glacio" ? (
-          <div className="calc-stats">
+        {character?.element && (
+          <>
             <img
               className="stat-icon"
               src={
-                icons.icontypes.find((i) => i.name === "Glacio DMG Bonus")?.icon
+                icons.icontypes.find(
+                  (i) => i.name === `${character?.element} DMG Bonus`,
+                )?.icon
               }
-              alt="Glacio DMG Bonus"
+              alt={`${character?.element} DMG Bonus`}
             />
 
-            <span className="stat-name">Glacio DMG Bonus </span>
+            <span className="stat-name">{character?.element} DMG</span>
             <span className="value">0.00 %</span>
-          </div>
-        ) : character?.element === "Fusion" ? (
-          <div className="calc-stats">
-            <img
-              className="stat-icon"
-              src={
-                icons.icontypes.find((i) => i.name === "Fusion DMG Bonus")?.icon
-              }
-              alt="Fusion DMG Bonus"
-            />
-
-            <span className="stat-name">Fusion DMG Bonus </span>
-            <span className="value">0.00 %</span>
-          </div>
-        ) : character?.element === "Electro" ? (
-          <div className="calc-stats">
-            <img
-              className="stat-icon"
-              src={
-                icons.icontypes.find((i) => i.name === "Electro DMG Bonus")
-                  ?.icon
-              }
-              alt="Electro DMG Bonus"
-            />
-
-            <span className="stat-name">Electro DMG Bonus </span>
-            <span className="value">0.00 %</span>
-          </div>
-        ) : character?.element === "Aero" ? (
-          <div className="calc-stats">
-            <img
-              className="stat-icon"
-              src={
-                icons.icontypes.find((i) => i.name === "Aero DMG Bonus")?.icon
-              }
-              alt="Aero DMG Bonus"
-            />
-
-            <span className="stat-name">Aero DMG Bonus </span>
-            <span className="value">0.00 %</span>
-          </div>
-        ) : character?.element === "Spectro" ? (
-          <div className="calc-stats">
-            <img
-              className="stat-icon"
-              src={
-                icons.icontypes.find((i) => i.name === "Spectro DMG Bonus")
-                  ?.icon
-              }
-              alt="Spectro DMG Bonus"
-            />
-
-            <span className="stat-name">Spectro DMG Bonus </span>
-            <span className="value">0.00 %</span>
-          </div>
-        ) : character?.element === "Havoc" ? (
-          <div className="calc-stats">
-            <img
-              className="stat-icon"
-              src={
-                icons.icontypes.find((i) => i.name === "Havoc DMG Bonus")?.icon
-              }
-              alt="Havoc DMG Bonus"
-            />
-
-            <span className="stat-name">Havoc DMG Bonus </span>
-            <span className="value">0.00 %</span>
-          </div>
-        ) : (
-          <></>
+          </>
         )}
       </div>
     </div>

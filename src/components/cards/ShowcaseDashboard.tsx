@@ -4,6 +4,7 @@ import Stats from "./StatsPanel.tsx";
 import ForteCard from "./ForteCard.tsx";
 import EchoCards from "./EchoCards.tsx";
 import type { WWCharacter } from "../../data/WWCharacter.ts";
+import "./ShowcaseDashboard.css";
 
 interface ShowcaseDashboardProps {
   character: WWCharacter | null;
@@ -20,13 +21,29 @@ function ShowcaseDashboard({
   return (
     <>
       <div className="dashboard-container">
-        <main>
-          <CharacterCard character={character} />
-          <Weapon weapon={weapon} onSelectWeapon={onSelectWeapon} />
-          <Stats weapon={weapon} character={character} />
-          <ForteCard />
+        <div className="top-grid">
+          <div className="character-card">
+            <CharacterCard character={character} />
+          </div>
+
+          <div className="middle-column">
+            <div className="stats-panel">
+              <Stats weapon={weapon} character={character} />
+            </div>
+
+            <div className="weapon-card">
+              <Weapon weapon={weapon} onSelectWeapon={onSelectWeapon} />
+            </div>
+          </div>
+
+          <div className="forte-card">
+            <ForteCard />
+          </div>
+        </div>
+        {/* this will be under the above elements */}
+        <div className="echo-cards">
           <EchoCards />
-        </main>
+        </div>
       </div>
     </>
   );
