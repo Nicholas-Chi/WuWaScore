@@ -1,5 +1,5 @@
 // import logo from "..assets/rover.webp"
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 // type NavbarProps = {
 //     setView: (view: string) => void
@@ -22,19 +22,27 @@ import { Link } from "react-router-dom"
 // }
 
 function Navbar() {
-    return (
-        <nav className="nav-container">
-            <Link to="/">
-                 <img src={`/rover.webp`} alt="Rover Logo" />
-            </Link>
-            <div>
-                <Link to="/"><button>Home</button></Link>
-                <Link to="characters"><button>Characters</button></Link>
-                <Link to="echoes"><button>Echoes</button></Link>
-                <Link to="about"><button>About</button></Link>
-            </div>
-        </nav>
-    )
+  return (
+    <nav className="nav-container">
+      <Link to="/">
+        <img src={`/rover.webp`} alt="Rover Logo" />
+      </Link>
+      <div>
+        <Link to="/">
+          <button>Home</button>
+        </Link>
+        <Link to="/characters">
+          <button>Characters</button>
+        </Link>
+        <Link to="/echoes">
+          <button>Echoes</button>
+        </Link>
+        <Link to="/about">
+          <button>About</button>
+        </Link>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
