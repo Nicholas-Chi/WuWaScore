@@ -15,10 +15,28 @@ interface CalculateStatsProps {
 }
 
 function calculateStats({ character, weapon }: CalculateStatsProps) {
+  // if there is no character, then there are no stats to calculate
+
+  if (!character) {
+    return {
+      total_hp: 0,
+      total_atk: 0,
+      total_def: 0,
+      total_crit: 0,
+      total_crit_dmg: 0,
+      total_healing: 0,
+      total_energy_regen: 0,
+    };
+  }
+
   return {
     total_hp: character
-      ? character.stats.base_hp *
-        (1 + (weapon?.subStat === "HP" ? weapon.subStatValue : 0) / 100)
+      ? Math.round(
+          character.stats.base_hp *
+            (1 +
+              (weapon?.subStat === "HP" ? weapon.subStatValue : 0) / 100 +
+              character.stats.bonus_hp / 100),
+        )
       : 0,
     total_atk: character
       ? (character.stats.base_atk +

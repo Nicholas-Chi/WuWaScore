@@ -53,6 +53,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100%;
+  min-width: 260px;
+  min-height: 400px;
 }
 
 .character-portrait img {
@@ -84,12 +86,13 @@ body {
 
 .dashboard-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   width: 80%;
   background: radial-gradient(circle, #272424, #3b3a3a, #1a1919);
   padding: 25px;
   margin: 15px auto;
-
+  max-width: 1280px;
 }
 
 .nav-container {
@@ -662,31 +665,8 @@ select option:disabled {
   transition: transform 0.2s;
 }
 
-.top-grid {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); 
-  grid-auto-rows: auto; 
-  align-items: stretch;
-  gap: 0.25rem; 
-}
-
-.middle-column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between the stats panel and the weapon panel */
-    width: 100%;
-    min-width: 0;
-}
 
 .stats-container, .weapon-card {
   width: 100%; 
   max-width: none; 
-}
-
-
-.forte-card {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  min-width: 0;
 }

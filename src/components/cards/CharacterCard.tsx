@@ -2,14 +2,15 @@
 import type { WWCharacter } from "../../data/WWCharacter";
 
 interface CharacterCardProps {
-    character: WWCharacter | null
+  character: WWCharacter | null;
 }
 
 function CharacterCard(props: CharacterCardProps) {
-    return (
+  return (
     <div className="character-portrait">
-        <img src={props.character?.images.portrait} alt={props.character?.name} />
+      <img src={props.character?.images.portrait} alt={props.character?.name} />
     </div>
-    )
+  );
 }
-export default CharacterCard
+
+export default CharacterCard;

@@ -25,7 +25,7 @@ import type { WWCharacter } from "../WWCharacter";
         base_healing: 0,
         base_energy_regen: 100.00,
         bonus_ele: 0,
-        bonus_hp: 1.12,
+        bonus_hp: 12,
         bonus_atk: 0,
         bonus_def: 0,
         bonus_heal: 12,

@@ -1,18 +1,11 @@
 
 .top-grid {
-    /*
-     display: grid;
-    grid-template-columns: auto 1fr; 
-    gap: 20px;
-    align-items: start;
-    width: 100%; 
-    */
-
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); 
-    grid-auto-rows: auto; 
-    align-items: stretch;
-    gap: 0.25rem; 
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); 
+  grid-auto-rows: auto; 
+  align-items: stretch;
+  gap: 15px; 
+  width: 100%;
 }
 
 .character-card {
@@ -20,6 +13,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
 }
 
 
@@ -28,16 +23,39 @@
     flex-direction: column;
     gap: 20px; /* Space between the stats panel and the weapon panel */
     width: 100%;
+    min-width: 0;
 }
 
 .stats-panel {
-
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
 }
 
 .weapon-card {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
 
+.weapon-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
 }
 
 .forte-card {
-    
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.echo-cards {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
 }

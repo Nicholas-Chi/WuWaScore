@@ -29,11 +29,12 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           alt="ATK"
         />
         <span className="stat-name">Attack </span> <br />
-        <span className="value">
+        {/* <span className="value">
           Base Attack: {character?.stats.base_atk}{" "}
-        </span>{" "}
+        </span>{" "} */}
         <br />
-        <span className="value">With Weapon: {stats.total_atk}</span>
+        {/* <span className="value">With Weapon: {stats.total_atk}</span> */}
+        <span className="value">{stats.total_atk}</span>
       </div>
 
       <div className="stat-item">
@@ -43,7 +44,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           alt="DEF"
         />
         <span className="stat-name">Defense </span>
-        <span className="value">{character?.stats.base_def}</span>
+        <span className="value">{stats.total_def}</span>
       </div>
 
       <div className="stat-item">
@@ -53,7 +54,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           alt="Crit Rate"
         />
         <span className="stat-name">Crit Rate </span>
-        <span className="value">{character?.stats.base_crit}%</span>
+        <span className="value">{stats.total_crit}%</span>
       </div>
 
       <div className="stat-item">
@@ -63,7 +64,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           alt="Crit DMG"
         />
         <span className="stat-name">Crit DMG </span>
-        <span className="value">{character?.stats.base_crit_dmg}%</span>
+        <span className="value">{stats.total_crit_dmg}%</span>
       </div>
 
       <div className="stat-item">
@@ -136,7 +137,7 @@ function StatsPanel({ character, weapon }: StatsPanelProps) {
           }
           alt="Resonance Liberation DMG Bonus"
         />
-        <span className="stat-name">Resonance Liberation</span>
+        <span className="stat-name">Res. Liberation</span>
         <span className="value">{`0.00%`}</span>
       </div>
 

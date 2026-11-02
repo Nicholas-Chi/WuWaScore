@@ -40,6 +40,7 @@ function ShowcaseDashboard({
             <ForteCard />
           </div>
         </div>
+
         {/* this will be under the above elements */}
         <div className="echo-cards">
           <EchoCards />
