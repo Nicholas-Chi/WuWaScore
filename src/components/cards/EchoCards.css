@@ -1,6 +1,13 @@
+.echo-card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
 .echo-card-item {
-  flex: 1;
-  gap: 10px;
   background-color: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -10,7 +17,28 @@
   justify-content: center;
 }
 
-.echo-cards .echo-card-item:hover {
+.echo-card-item:hover {
   background-color: rgba(255, 255, 255, 0.05);
   cursor: pointer;
 }
+
+.echo-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.echo-card-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+}
+
+.echo-card-name {
+  color:white;
+  font-size: 1rem;
+}
+

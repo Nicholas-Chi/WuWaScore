@@ -4,7 +4,7 @@
   grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); 
   grid-auto-rows: auto; 
   align-items: stretch;
-  gap: 15px; 
+  gap: 16px; 
   width: 100%;
 }
 
@@ -21,7 +21,7 @@
 .middle-column {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Space between the stats panel and the weapon panel */
+    gap: 15px; /* Space between the stats panel and the weapon panel */
     width: 100%;
     min-width: 0;
 }
@@ -53,8 +53,6 @@
 }
 
 .echo-cards {
-    display: flex;
-    gap: 5px;
     width: 100%;
     box-sizing: border-box;
     margin-top: 5px;
