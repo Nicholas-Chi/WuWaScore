@@ -1,5 +1,5 @@
 import React from "react";
-import { Select, ConfigProvider, theme } from "antd";
+import { Select, ConfigProvider, theme, Input } from "antd";
 import sonata from "../../data/sonatas.json";
 import echoData from "../../data/echoes.json";
 
@@ -7,6 +7,8 @@ interface EchoFormProps {
   onClose: () => void;
   onSelectEcho: (echo: any) => void;
 }
+
+const { Search } = Input;
 
 export default function EchoWindow(props: EchoFormProps) {
   const [searchEcho, setSearchEcho] = React.useState("");
@@ -33,25 +35,6 @@ export default function EchoWindow(props: EchoFormProps) {
     props.onSelectEcho(echo);
   }
 
-  // Map filtered echoes to JSX elements
-  // const echoElements = filteredEchoes.map(echo => (
-  //     // <div key={echo.id} className="echo-card">
-  //     //     <img src={`/assets/icons/echoes/${echo.id}.webp`} alt={echo.name} />
-  //     //     {/* <h3>{echo.name}</h3> */}
-  //     //     {/* <p>Cost: {echo.cost}</p>
-  //     //     <p>Set: {echo.sets.join(", ")}</p> */}
-  //     // </div>
-
-  //     <button
-  //         key={echo.id}
-  //         className="echo-card"
-  //         onClick={() => handleEchoClick(echo)}
-  //     >
-  //         <img src={`/assets/icons/echoes/${echo.id}.webp`} alt={echo.name} />
-  //     </button>
-  //     )
-  // )
-
   return (
     <div className="modal-overlay" onClick={props.onClose}>
       <div className="echo-window" onClick={(e) => e.stopPropagation()}>
@@ -59,16 +42,26 @@ export default function EchoWindow(props: EchoFormProps) {
           X
         </button>
 
-        <h2>Available Echoes</h2>
+        <h2 style={{ color: "white" }}>Available Echoes</h2>
 
         <div className="filters-container">
-          <input
+          {/* <input
             type="text"
             placeholder="Search echoes..."
             value={searchEcho}
             onChange={(e) => setSearchEcho(e.target.value)}
             className="search-bar"
-          />
+          /> */}
+          <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
+            <Search
+              placeholder="Search echoes..."
+              value={searchEcho}
+              allowClear
+              onChange={(e) => setSearchEcho(e.target.value)}
+              style={{ width: "250px" }}
+              className="search-bar"
+            ></Search>
+          </ConfigProvider>
           <div className="set-filter-container">
             <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
               <Select
@@ -169,12 +162,7 @@ export default function EchoWindow(props: EchoFormProps) {
             </div>
           </div>
         </div>
-        {/* {echoElements.length > 0 ? echoElements : <p>No results found.</p>} */}
       </div>
-
-      {/* <div className="echo-grid">
-                    {echoElements}
-                </div> */}
     </div>
   );
 }

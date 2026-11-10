@@ -1,9 +1,11 @@
 import { Card } from "antd";
 import React from "react";
 import EchoWindow from "../modals/EchoWindow";
+import EchoDrawer from "../modals/EchoDrawer";
 import "./EchoCards.css";
 
 function EchoCards() {
+  const [showDrawer, setShowDrawer] = React.useState(false);
   const [echoWindow, showEchoWindow] = React.useState(false);
 
   //  use this to determine which slot is selected right now
@@ -20,6 +22,14 @@ function EchoCards() {
 
   const closeEchoWindow = () => {
     showEchoWindow(false);
+  };
+
+  const openDrawer = () => {
+    setShowDrawer(true);
+  };
+
+  const closeDrawer = () => {
+    setShowDrawer(false);
     setActiveIndex(null);
   };
 
@@ -30,6 +40,7 @@ function EchoCards() {
       setEchoesState(newEchoesState);
     }
     closeEchoWindow();
+    openDrawer();
   };
 
   const echoes = [0, 1, 2, 3, 4];
@@ -38,6 +49,13 @@ function EchoCards() {
     <>
       {echoWindow && (
         <EchoWindow onClose={closeEchoWindow} onSelectEcho={setSelectedEcho} />
+      )}
+      {showDrawer && activeIndex !== null && (
+        <EchoDrawer
+          open={showDrawer}
+          onClose={closeDrawer}
+          echo={activeIndex !== null ? echoesState[activeIndex] : null}
+        />
       )}
       <div className="echo-card-grid">
         {echoes.map((index) => {

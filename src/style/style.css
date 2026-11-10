@@ -249,7 +249,11 @@ body {
   transition: transform 0.2s;
 }
 
-
+.filters-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* Set Filter */
 .set-filter-container {
@@ -485,16 +489,6 @@ select option:disabled {
   margin-bottom: 20px;
 }
 
-.search-bar {
-  width: 250px;
-  height: 40px;
-  padding: 10px;
-  background-color: #1a1a1a; /* Darker input background */
-  border: none;
-  border-radius: 6px;
-  color: #e0e0e0;
-  font-size: 14px;
-}
 
 .weapon-filter,
 .attribute-filter {
